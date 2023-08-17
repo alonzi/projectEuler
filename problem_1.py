@@ -1,5 +1,5 @@
 #!/usr/bin/python
-
+#comment
 # https://projecteuler.net/problem=1
 
 sum=0
