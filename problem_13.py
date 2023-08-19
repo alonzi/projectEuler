@@ -106,5 +106,5 @@ num = [\
 
 total = sum(num)
 # the question asks for the first 10 digits of the sum
-first10 = int(str(num)[:10])
+first10 = int(str(total)[:10])
 print first10
