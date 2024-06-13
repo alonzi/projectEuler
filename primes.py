@@ -1,4 +1,4 @@
-
+# Link to cornell's website on this link
 #http://pages.physics.cornell.edu/~sethna/StatMech/ComputerExercises/PythonSoftware/Primes.py
 
 """
