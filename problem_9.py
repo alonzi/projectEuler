@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-# https://projecteuler.net/problem=\9
+# https://projecteuler.net/problem=9
 
 for a in range(1,1000):
     for b in range(a,1000):
