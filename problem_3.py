@@ -4,7 +4,7 @@
 
 import primes
 
-target = 13195
+# target = 13195
 target = 600851475143
 
 
@@ -16,4 +16,4 @@ while target>1:
     else:
         factor = primes.nextPrime(factor)
 
-print factor
+print(factor)
