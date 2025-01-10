@@ -9,7 +9,7 @@ An introduction to writing functions and making histograms in Python.
 """
 Import libraries.
 """
-import scipy, pylab
+import scipy, pylab, math
 
 def isEven(n):
     """
@@ -22,24 +22,25 @@ def isEven(n):
 
 def isPrime(n):
     """
-    Function which returns True if the integer n is prime. Tests integers
-    d from two up to Dmax = scipy.sqrt(n), stopping if any are divisors of n
-    (or, test if n is even and then test odd divisors). This is most naturally
-    done using the "while" command, 
-      while n%d != 0 and d <= Dmax:
-          d+=1		[or 2]
-    What condition will d satisfy after the while loop if n is prime?
+    Function which returns True if the integer n is prime. 
+    Tests integers d from 2 up to sqrt(n), stopping if any are divisors of n.
+    Uses an optimized approach by checking for even numbers first 
+    and then testing odd divisors.
     """
-    Dmax = scipy.sqrt(n)
+    if n < 2:
+        return False
     if n == 2:
         return True
-    if isEven(n):
+    if n % 2 == 0:
         return False
-    d = 3
-    while n%d != 0 and d <= Dmax:
-        d += 2
-    return d > Dmax
 
+    Dmax = math.sqrt(n)
+    d = 3
+    while d <= Dmax and n % d != 0:
+        d += 2  # Only test odd numbers
+
+    return d > Dmax
+    
 def primeList(nMax):
     """
     Returns a list of all prime numbers less than nMax.
