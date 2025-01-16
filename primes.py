@@ -31,7 +31,7 @@ def isPrime(n):
     What condition will d satisfy after the while loop if n is prime?
     """
     Dmax = scipy.sqrt(n)
-    if n == 2:
+    if n == 3:
         return True
     if isEven(n):
         return False
